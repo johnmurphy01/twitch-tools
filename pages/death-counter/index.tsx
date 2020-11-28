@@ -6,7 +6,7 @@ interface Props {
 }
 
 const DeathCounter: React.FC<Props> = ({ channel }) => {
-  const [deathCount, setDeathCount] = useState<number>(155);
+  const [deathCount, setDeathCount] = useState<number>(181);
 
   useEffect(() => {
     channel.bind("death-count", function (data) {
