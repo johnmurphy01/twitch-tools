@@ -6,7 +6,7 @@ interface Props {
 }
 
 const DeathCounter: React.FC<Props> = ({ channel }) => {
-  const [deathCount, setDeathCount] = useState<number>(181);
+  const [deathCount, setDeathCount] = useState<number>(0);
 
   useEffect(() => {
     channel.bind("death-count", function (data) {
@@ -16,8 +16,8 @@ const DeathCounter: React.FC<Props> = ({ channel }) => {
 
   return (
     <>
-      <div style={{ fontFamily: "AmazDoomLeft", marginBottom: "10px" }}>
-        <label>{`Ripped and Torn: ${deathCount}`}</label>
+      <div style={{ fontFamily: "Slant", color: "#FF9900", marginBottom: "10px" }}>
+        <label>{`Dirtnaps: ${deathCount}`}</label>
       </div>
     </>
   );
